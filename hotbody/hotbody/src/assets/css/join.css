@@ -1,0 +1,372 @@
+@font-face {
+  font-family: "NanumBarunGothic";
+
+  font-style: normal;
+  font-weight: 400;
+
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf")
+      format("truetype");
+}
+* {
+  font-family: "NanumBarunGothic";
+  margin: 0;
+  padding: 0;
+}
+
+.flexs {
+  position: relative;
+  display: flex;
+}
+.btnJoin,
+.slide_sub {
+  background: rgb(255, 88, 102);
+  color: white;
+}
+.check {
+  color: crimson;
+  width: 100%;
+  margin: 2vh 1vw;
+  font-size: 1vw;
+  text-align: left;
+}
+#nickname {
+  float: left;
+}
+
+.radios > label {
+  display: block;
+}
+
+.btnJoin {
+  cursor: pointer;
+  backface-visibility: hidden;
+  text-align: center;
+}
+.radios > label {
+  border-radius: 12px;
+  position: relative;
+  color: #000;
+  background-color: rgb(222, 222, 222);
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input:checked + label {
+  background-color: #2fcc71;
+}
+
+.radios > input {
+  display: none;
+}
+.list {
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+}
+.subjective {
+  width: 100%;
+  text-align: left;
+}
+.subjective > input {
+  min-width: 100px;
+  max-width: 150px;
+}
+.sub_answer {
+  border: none;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+.sub_answer_unit {
+  font-size: 24px;
+}
+.img_gen {
+  width: 10vw;
+  height: 17vh;
+  margin: 0 20vw 0 0;
+}
+
+.sub_answer {
+  width: 50%;
+  padding: 6% 12% 0 0;
+}
+.headarea {
+  width: 100%;
+  padding: 2vh 1vw;
+  display: flex;
+}
+
+.main_question {
+  margin: 2vh 1vw;
+  text-align: left;
+}
+
+/*테블릿 및 모바일 */
+@media (max-width: 760px) {
+  .sub_imgs {
+    display: none;
+  }
+  .nl {
+    display: none;
+  }
+  .main_question {
+    font-size: 5vw;
+  }
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+  }
+  .slide_sub {
+    width: 100vw;
+    height: 10vh;
+    font-size: 3vw;
+    line-height: 10vh;
+  }
+  .slide_main {
+    width: 100vw;
+    height: 900vh;
+  }
+
+  .content_ {
+    width: 90vw;
+    height: 60vh;
+    margin: 5vh 5vw;
+  }
+
+  .showpage {
+    width: 100vw;
+    height: 10vh;
+    line-height: 5vh;
+    text-align: center;
+    font-size: 5vh;
+  }
+  .btnSetss {
+    width: 100vw;
+    height: 10vh;
+    float: right;
+    font-size: 2vh;
+  }
+  .margin1 {
+    width: 50vw;
+    height: 5vh;
+  }
+
+  .btnJoin {
+    width: 50vw;
+    height: 7vh;
+    line-height: 7vh;
+  }
+
+  .btnSetss > div {
+    margin: 0 5%;
+    border-radius: 12px;
+  }
+
+  .sub_answer {
+    width: 50%;
+    padding: 6% 12% 0 0;
+  }
+
+  .gen {
+    padding: 4vh 1vw;
+  }
+  .imgs {
+    text-align: center;
+    width: 90vw;
+  }
+  .imgs > div {
+    width: 45vw;
+  }
+  .img_gen {
+    width: 21vw;
+    margin: 0 10vw;
+  }
+  .radios2 > label {
+    width: 25vw;
+    height: 20vh;
+    margin: 4vh 10vw;
+    font-size: 10vw;
+    line-height: 20vh;
+  }
+
+  .radios1 > label {
+    width: 90vw;
+    height: 12vh;
+    margin: 2vh 0;
+    font-size: 9vw;
+    line-height: 12vh;
+  }
+
+  .headarea > input {
+    width: 80vw;
+    height: 5vh;
+    /* padding: 2vh 5vw; */
+  }
+  .headarea {
+    margin: 5vh 0;
+  }
+}
+
+/**데스크 1 */
+@media (min-width: 761px) and (min-height: 320px) {
+  .sub_imgs {
+    width: 18vw;
+  }
+  .sub_img {
+    margin: 16vh 0;
+    width: 18vw;
+  }
+  .main_question {
+    font-size: 2vw;
+  }
+  /*======= 틀을 잡아주는 부분 슬라이드는 크롬창 크기를 기준으로 60%(60vw)를 잡고,
+            */
+  .slide {
+    position: absolute;
+    width: 60vw;
+    height: 60vh;
+    box-shadow: 5px 5px 5px 5px gray;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .slide_sub {
+    padding: 2vh 0;
+    width: 18vw;
+    height: 60vh;
+    font-size: 1.4vw;
+  }
+
+  .slide_main {
+    width: 42vw;
+    height: 60vh;
+  }
+
+  .content_ {
+    width: 38vw;
+    height: 48vh;
+    margin: 2vh 2vw;
+  }
+  .showpage {
+    width: 19vw;
+    height: 10vh;
+    line-height: 5vh;
+    float: left;
+    font-size: 3vh;
+  }
+
+  .btnSetss {
+    width: 19vw;
+    height: 10vh;
+    float: right;
+    font-size: 1vh;
+  }
+  /*=================================================== */
+  /** 오른쪽 아래 버튼 setting */
+  .margin1 {
+    width: 35vw;
+    height: 5vh;
+  }
+
+  .btnJoin {
+    width: 35vw;
+    height: 5vh;
+    line-height: 5vh;
+  }
+
+  .btnSetss > div {
+    margin: 0 5%;
+    border-radius: 12px;
+  }
+  /**====================================================== */
+  /* radio를 버튼 모양 사이즈 */
+  .radios1 > label {
+    width: 30vh;
+    height: 7vh;
+    margin: 2vh 5%;
+  }
+
+  .radios2 > label {
+    width: 12vw;
+    margin: 3vh 4vw;
+  }
+
+  .radios > label {
+    font-size: 3vh;
+    line-height: 5vh;
+  }
+  /**============================================================ */
+  .radios > input:checked + label:after {
+    width: 2vw;
+    height: 2vh;
+    line-height: 4vh;
+  }
+
+  .imgs {
+    text-align: center;
+    width: 100%;
+  }
+  .imgs > div {
+    width: 19vw;
+    padding: 0 5vw;
+  }
+
+  .headarea > input {
+    width: 19vw;
+    height: 5vh;
+    padding: 1vh 1vw;
+  }
+}
+/**데스크 3 : 가로가 유난히 긴 웹페이지 높이를 고정으로 가로의 배율로 크기 조절 */
+@media (max-width: 1960px) and (max-height: 400px) {
+  .radios {
+    display: flex;
+  }
+
+  .radios1 > label {
+    width: 20vw;
+    height: 40px;
+    font-size: 1vw;
+    line-height: 40px;
+
+    margin: 2vh 1vw;
+  }
+}
+@media (min-width: 1960px) and (max-height: 760px) {
+  .radios {
+    display: flex;
+  }
+  .radios1 > label {
+    width: 20vw;
+    height: 80px;
+    font-size: 1vw;
+    line-height: 80px;
+
+    margin: 2vh 1vw;
+  }
+  .margin1 {
+    width: 35vw;
+    height: 5vh;
+  }
+
+  .btnJoin {
+    width: 35vw;
+    height: 5vh;
+    cursor: pointer;
+    line-height: 5vh;
+    backface-visibility: hidden;
+    text-align: center;
+  }
+}

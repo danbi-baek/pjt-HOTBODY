@@ -1,0 +1,350 @@
+// Imports
+//
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+// Vars and Reset
+//
+$theme: #454cad;
+$dark-text: #5f6982;
+
+html,
+body,
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+html,
+body {
+  height: 100%;
+  text-align: center;
+}
+body {
+  padding: 2rem;
+  background: #f8f8f8;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  line-height: 1;
+  color: $theme;
+  margin-bottom: 0;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: $dark-text;
+}
+// Upload Demo
+//
+
+/////////////////////
+
+.img_upload {
+  //  max-width: 50px;
+  //  height: 50px;
+  height: 99%;
+  width: auto;
+  margin: 1px 0;
+}
+#file-upload-btn {
+  &:hover {
+    background-color: #8387b6f1;
+  }
+}
+.btn_img {
+  width: 150px;
+  height: 6%;
+  background-color: rgb(255, 88, 102);
+  color: #fff;
+  cursor: pointer;
+  margin: 50px 0 0 50px;
+  align-self: center;
+  line-height: 42px;
+  backface-visibility: hidden;
+  position: absolute;
+  text-align: center;
+}
+.btn_img:hover {
+  background-color: rgba(255, 146, 157, 0.884);
+}
+
+.photo {
+  background-color: $theme;
+}
+
+.register-btn {
+  width: 150px;
+  // height: 5%;
+  background-color: rgb(255, 88, 102);
+  color: #fff;
+  cursor: pointer;
+  align-self: center;
+  line-height: 42px;
+  text-align: center;
+//position: fixed;
+  left: 2%;
+  z-index: 999;
+  top: 30%;
+}
+.register-btn:hover {
+  background-color: rgba(255, 146, 157, 0.884);
+}
+/////////////////////
+
+.uploader {
+  display: block;
+  clear: both;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  #not_img {
+    float: left;
+    clear: both;
+    width: 100%;
+    height: 250px;
+    // padding: 1.5rem 1.5rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 7px;
+    border: 3px solid #eee;
+    transition: all 0.2s ease;
+    user-select: none;
+
+    &:hover {
+      border-color: $theme;
+    }
+    &.hover {
+      border: 3px solid $theme;
+      box-shadow: inset 0 0 0 6px #eee;
+
+      #start {
+        i.fa {
+          transform: scale(0.8);
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+  #file-drag {
+    float: left;
+    clear: both;
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    background: #fff;
+    border-radius: 7px;
+    border: 3px solid #eee;
+    transition: all 0.2s ease;
+    user-select: none;
+
+    &:hover {
+      border-color: $theme;
+    }
+    &.hover {
+      border: 3px solid $theme;
+      box-shadow: inset 0 0 0 6px #eee;
+
+      #start {
+        i.fa {
+          transform: scale(0.8);
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  #start {
+    // float: left;
+    clear: both;
+    width: 60%;
+    height: 70%;
+    margin: 0 auto;
+    // border: 1px red solid;
+
+    &.hidden {
+      display: none;
+    }
+    i.fa {
+      font-size: 50px;
+      margin-bottom: 1rem;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  input[type="file"] {
+    display: none;
+  }
+
+  div {
+    // margin: 5px 10px 0 10px;
+    // color: $dark-text;
+  }
+  .photo {
+    display: inline-block;
+    margin: 0.5rem 1.5rem 1rem 1.5rem;
+    clear: both;
+    font-family: initial;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: initial;
+    border: none;
+    border-radius: 0.2rem;
+    outline: none;
+    padding: 0 1rem;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+    background: $theme;
+    border-color: $theme;
+    width: 30%;
+    cursor: pointer;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #8387b6f1;
+    }
+  }
+}
+
+.check {
+  color: crimson;
+  width: 100%;
+  margin: 3px;
+  font-size: 1.5vh;
+  text-align: center;
+}
+
+.div_file {
+  color: #5f6982;
+}
+
+.body_exam {
+  width: auto;
+  height: 80%;
+  margin: 15%
+  // border: 1px solid blueviolet;
+}
+
+.file_info{
+  text-align: center;
+  // border: 1px red solid;
+  height: 200px;
+}
+
+
+.btn_body {
+    width: 150px;
+    // height: 5%;
+    background-color: rgb(255, 88, 102);
+    color: #fff;
+    cursor: pointer;
+    align-self: center;
+    line-height: 42px;
+    text-align: center;
+    position: fixed;
+    left: 2%;
+    z-index: 999;
+    top: 30%;
+  }
+  .btn_body:hover {
+    background-color: rgba(255, 146, 157, 0.884);
+  }
+
+  .food-upload{
+    width: 50px;
+    height: 200px; 
+  }
+
+  .img-body {
+    height: 280px;
+  }
+  .flexs {
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+
+  ////////
+  
+  .button-container {
+  position: relative;
+  text-align: center;
+  padding: 0;
+  border-radius: 35%; 
+  overflow:hidden; 
+  width: 350px;
+  height: 350px;
+  margin:0 auto;
+  }
+  
+  
+  
+  .button-container A:before{  
+    content: '';
+    display: inline-block;
+    height: 48%; 
+    /* 
+    vertical-align:middle; 
+    height: 100%;*/
+
+   
+    }
+  
+  
+  .div_add {
+    transition: all 1s ease-out;
+    background: rgba(88, 88, 88, 0.7);
+     border-radius:35%; vertical-align:middle;
+    padding:5%; 
+    color: #FFFFFF;
+    position:absolute;
+    font-size: 1.125em; 
+    font-weight: 700; 
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    display:inline-block;
+    text-decoration: none;
+    text-transform:uppercase;
+    
+  }
+  
+  .div_add:hover {
+    background: none;
+    border: none; 
+    opacity:0;
+  }
+  .button-container img{width:100%; height:100%; display:block}
+  
+  
+  /*Columns*/
+   .one_fourth {
+  // position: relative;
+  // margin-right: 4%;
+  // float: left;
+  // min-height: 1px;
+  // height: auto ;
+  // width: 20%;
+  position: relative;
+  margin: 40px 30px;
+  text-align: center;
+  float: left;
+  min-height: 1px;
+  height: auto;
+  width: 40%;
+  
+  // border:1px solid green;
+  }
+  
+ .food_text {
+  margin: 40% auto;
+ }
